@@ -61,8 +61,8 @@
 		</plugins>
 	</build>
 	<scm>
-		<connection>scm:git:https://github.com/himanshu3pg/poc-repo.git</connection>
+		<connection>scm:git:git@github.com:himanshu3pg/poc-repo.git</connection>
 		<url>https://github.com/himanshu3pg/poc-repo</url>
-		<developerConnection>scm:git:https://github.com/himanshu3pg/poc-repo.git</developerConnection>
+		<developerConnection>scm:git:git@github.com:himanshu3pg/poc-repo.git</developerConnection>
 	</scm>
 </project>
