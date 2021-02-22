@@ -1,0 +1,20 @@
+execution:
+  iterations: 20  # loop over test suite for 5 times
+  concurrency: 100   # number of virtual users
+  ramp-up: 10s       # time of load growing
+  steps: 5          # number of steps of growing
+  scenario: simple
+  
+scenarios:
+  simple:
+    requests:
+     - http://localhost:8989/test
+
+reporting:
+- module: final-stats
+  dump-xml: stats.xml
+- module: passfail
+  criteria: #https://gettaurus.org/docs/PassFail/
+  - avg-rt>1ms for 10s, continue as failed
+  - fail>50% for 10s, continue as failed
+  - rc500>20 for 5s, stop as failed
