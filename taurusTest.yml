@@ -15,6 +15,6 @@ reporting:
   dump-xml: stats.xml
 - module: passfail
   criteria: #https://gettaurus.org/docs/PassFail/
-  - avg-rt>1ms for 10s, continue as failed
+  - avg-rt>100ms for 10s, continue as failed
   - fail>50% for 10s, continue as failed
   - rc500>20 for 5s, stop as failed
